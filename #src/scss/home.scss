@@ -1,3 +1,145 @@
 //====================================================================================================
+.page {
+  flex: 1 1 auto;
+  padding: 87px 0px 0px 0px;
+
+  @media (max-width: $md3+px) {
+    padding-top: calc(30px + (87 - 30) * ((100vw - 320px) / (1200 - 320)));
+  }
+  @media (max-width: $md4+px) {
+    padding-top: 0;
+  }
+}
+
+
+
+.main__info {
+  padding-top: 40px;
+  display: flex;
+  margin-bottom: calc(35px + (50 - 35) * ((100vw - 320px) / (1200 - 320)));
+
+  @media (max-width: $md4+px) {
+    display: block;
+
+  }
+
+  &_name {
+    display: flex;
+    flex: 0 1 43%;
+    font-size: 48px;
+    line-height: 58px;
+    font-weight: 800;
+    font-family: 'Roboto';
+    padding: 0px 50px 0px 0px;
+    transform: translate(-100px, 0px);
+    opacity: 0;
+    transition: .5s;
+    
+
+    &._active {
+      transform: translate(0px, 0px);
+      opacity: 1;
+    }
+    
+    
+    @media (max-width: $md4+px) {
+      padding-bottom: 25px;
+    }
+
+  }
+
+  &_text {
+    font-weight: 500;
+    font-size: 18px;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 10px;
+    transform: translate(0px, -100px);
+    opacity: 0;
+    transition: .5s ease-out;
+    transition-delay: .3s;
+
+    @media (max-width: $md4+px) {
+      transform: translate(100px, 0px);
+    }
+
+    &._active {
+      transform: translate(0px, 0px);
+      opacity: 1;
+    }
+  }
+}
+
+
+.photo {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0px 0px 100px 0px;
+  opacity: 0;
+  transform: scale(1.2);
+  transition: .8s ease;
+  transition-delay: .8s;
+  &._active{
+    opacity: 1;
+    transform: scale(1);
+  }
+  @media (max-width: $md4+px) {
+    display: none;
+    // padding-bottom: calc(50px + (100 - 50) * ((100vw - 320px) / (1200 - 320)));
+  }
+}
+
+.photo_mobile{
+  display: none;
+  @media (max-width: $md4+px) {
+    display: block;
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0px 0px 100px 0px;
+  }
+}
+
+
+.about {
+  background-color: #e5e5e5;
+  padding: 120px 0px 110px 0px;
+
+  &__title {
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 42px;
+    text-align: center;
+    margin: 0px 0px 35px 0px;
+    transform: translate(0px, -100px);
+    opacity: 0;
+    transition: .5s;
+    &._active {
+      transform: translate(0px, 0px);
+      opacity: 1;
+    }
+  }
+
+  
+
+  &__text {
+    text-align: center;
+    margin: 0px auto 50px auto;
+    max-width: 510px;
+    font-size: 18px;
+    line-height: 22px;
+     transform: translate(0px, 100px);
+     opacity: 0;
+     transition: .5s;
+    
+     &._active {
+       transform: translate(0px, 0px);
+       opacity: 1;
+     }
+  }
+}
+
+
 
 //====================================================================================================
